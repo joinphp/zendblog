@@ -1,0 +1,13 @@
+<div class="title"><?php echo $this->post['Title']; ?></div>
+<div class="description"><?php echo $this->post['Description'];  ?></div>
+<div class="comments">
+	<?php if( count($this->comments) ) : ?>
+		<?php foreach( $this->comments as $comment ) : ?>
+			<div class="postedby"><a href="<?php echo $comment['Webpage']; ?>" ><?php echo $this->escape( $comment['Name'] ); ?></a> on <span><?php echo $this->escape( date( 'd-m-Y', strtotime($comment['Postedon']) ) ); ?></span></div>
+			<div class="comment"><?php echo $this->escape( $comment['Description'] ); ?></div>
+		<?php endforeach; ?>
+	<?php else : ?>
+	<div>No comments</div>
+	<?php endif; ?>
+</div>
+<div class="newcomments"><?php echo $this->commentsForm; ?></div>
