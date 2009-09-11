@@ -1,6 +1,10 @@
 Creating a blog using Zend Framework . I am learning zend framework and also learning git .
 
-I have not added any authentication at present . Want to work on the authentication .
+I have not added any authentication at present . 
+
+Added authentication and authorization . Its not implemented in a proper way now . I want to change many things .
+
+As I am new to Zend_ACL and Zend_Auth I have made this for my convinience :)
 
 There may be errors from my part as I am learning . You can download and use at your own risk .
 
