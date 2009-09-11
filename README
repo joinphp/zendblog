@@ -2,6 +2,12 @@ Creating a blog using Zend Framework . I am learning zend framework and also lea
 
 I have not added any authentication at present . 
 
+3 roles are there . Guest , User , Blogger and Admin .
+
+Guest can view all comments and posts .User can post comments . Blogger can add, edit posts and add comments.
+
+Admin can do everything.
+
 Added authentication and authorization . Its not implemented in a proper way now . I want to change many things .
 
 As I am new to Zend_ACL and Zend_Auth I have made this for my convinience :)
