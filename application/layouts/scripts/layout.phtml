@@ -12,7 +12,16 @@ echo $this->doctype() ?>
 <body>
 <div id="header" style="background-color: #EEEEEE; height: 30px;">
     <div id="header-logo" style="float: left">
-        <b><a href="<?php echo $this->baseurl(); ?>">ZF Quickstart Application</a></b>
+        <b><a href="<?php echo $this->baseurl(); ?>">ZF Quickstart Application</a></b>&nbsp; &nbsp; 
+        <a href="<?php 
+        if( Zend_Auth::getInstance()->hasIdentity() ) { 
+        	$str = "/index/logout";
+        	$log = "Logout";  
+       	} else { 
+       		$str = "/index/login&redirect=";
+       		$log = "Login";  
+       	} 
+       	echo $this->baseurl().$str; ?>"><?php echo $log; ?></a>
     </div>    
 </div>
 

@@ -40,6 +40,7 @@ class PostsController extends Zend_Controller_Action
 		$this->view->commentsForm = $commentsForm;
 		$comments = $commentsObj->getComments($postid);
 		$this->view->comments = $comments;
+		$this->view->edit = '/posts/edit/id/'.$postid;
 	}
 
 	public function commentsAction()
@@ -51,7 +52,7 @@ class PostsController extends Zend_Controller_Action
 	{
 		// action body
 		if(!Zend_Auth::getInstance()->hasIdentity()) {
-			$this->_redirect('index/login');
+			//$this->_redirect('index/login');
 		}
 		$request = $this->getRequest();
 		$postForm = new Form_Post();
@@ -69,19 +70,29 @@ class PostsController extends Zend_Controller_Action
 	{
 		// action body
 		$request = $this->getRequest();
-		$postid = (int)$request->getParam('id');		
-		$postForm = new Form_Post();
-		$postModel = new Model_DbTable_Posts();
-		if ($this->getRequest()->isPost()) {
-			if ($postForm->isValid($request->getPost())) {
-				$postModel->updatePost($postForm->getValues());
-				$this->_redirect('index/index');
+		$postid = (int)$request->getParam('id');
+		if(!Zend_Auth::getInstance()->hasIdentity()) {
+			$this->_redirect('posts/view/id/'.$postid);
+		}
+		$identity = Zend_Auth::getInstance()->getIdentity();
+		
+		$acl = new Model_Acl();
+		if( $acl->isAllowed( $identity['role'] ,'posts','edit') ) {
+			$postForm = new Form_Post();
+			$postModel = new Model_DbTable_Posts();
+			if ($this->getRequest()->isPost()) {
+				if ($postForm->isValid($request->getPost())) {
+					$postModel->updatePost($postForm->getValues());
+					$this->_redirect('posts/view/id/'.$postid);
+				}
+			} else {
+				$result = $postModel->getPost($postid);
+				$postForm->populate( $result );
 			}
+			$this->view->postForm = $postForm;
 		} else {
-			$result = $postModel->getPost($postid);
-			$postForm->populate( $result );			
-		}			
-		$this->view->postForm = $postForm;
+			$this->_redirect('posts/view/id/'.$postid);
+		}
 	}
 
 }

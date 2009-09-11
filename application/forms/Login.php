@@ -18,6 +18,7 @@ class Form_Login extends Zend_Form
 				->addFilter('StringTrim')
 				->addValidator('NotEmpty');
 		$submit = new Zend_Form_Element_Submit('submit');
+		$redirect = new Zend_Form_Element_Hidden('redirect');
 		$submit->setAttrib('id', 'submitbutton');
 		$this->addElements( array ( $username, $pass, $submit));
 	}
