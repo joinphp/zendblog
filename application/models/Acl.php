@@ -34,6 +34,9 @@ class Model_Acl extends Zend_Acl
 
 		//Add a resource called posts
 		$this->add(new Zend_Acl_Resource('posts'));
+		
+		//Add a resource called posts
+		$this->add(new Zend_Acl_Resource('comments'));
 
 		//Add a resource called edit, which inherits posts
 		//$this->add(new Zend_Acl_Resource('edit'), 'posts');
@@ -44,6 +47,9 @@ class Model_Acl extends Zend_Acl
 		//Finally, we want to allow guests to view pages
 		$this->allow('guest', 'posts', 'view');
 
+		//User can add comments
+		$this->allow('user', 'comments', 'add');
+		
 		// Bloggers can add, edit posts
 		$this->allow('blogger', 'posts', 'edit');
 		$this->allow('blogger', 'posts', 'add');

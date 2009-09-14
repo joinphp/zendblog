@@ -13,6 +13,9 @@ class IndexController extends Zend_Controller_Action
 		// action body
 		$posts = new Model_DbTable_Posts();
 		$result = $posts->getPosts();
+		/*
+		 * Check whether 
+		 */
 		$page = $this->_getParam('page',1);
 		$paginator = Zend_Paginator::factory($result);
 		$paginator->setItemCountPerPage(2);

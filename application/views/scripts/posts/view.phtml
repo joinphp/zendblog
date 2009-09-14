@@ -16,11 +16,9 @@
 	<div>No comments</div>
 	<?php endif; ?>
 </div>
-<div class="newcomments">
-<?php if( Zend_Auth::getInstance()->hasIdentity() ) : 
+<div class="newcomments"><?php if( Zend_Auth::getInstance()->hasIdentity() ) : 
 		echo $this->commentsForm;
 	else :
 		?>Login to Post comments<?php 
 	endif;
-?>
-</div>
+?></div>
