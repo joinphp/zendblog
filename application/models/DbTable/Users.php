@@ -8,8 +8,8 @@ class Model_DbTable_Users extends Zend_Db_Table_Abstract
 	
 	public function findCredentials($username, $pwd)
 	{
-		$select = $this->select()->where('username = ?', $username)
-			->where('password = ?', $this->hashPassword($pwd));
+		$select = $this->select()->where('Username = ?', $username)
+			->where('Password = ?', $this->hashPassword($pwd));
 		$row = $this->fetchRow($select);
 		if($row) {
 			/*
