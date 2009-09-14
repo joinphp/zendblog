@@ -1,4 +1,6 @@
-Creating a blog using Zend Framework . I am learning zend framework and also learning git .
+*Note , this is not fully complete . I am working on it to add additional functionalities .
+
+Creating a blog using Zend Framework 1.9 . I am learning zend framework and also learning git .
 
 Added authentication , authorization , pagination etc.
 
@@ -17,6 +19,8 @@ Actually need a Roles table and the foreign key will be placed in the Users tabl
 But for the simplicity I have added the roles in the users table itself . 
 
 As I am new to Zend_ACL and Zend_Auth I have made this for my convinience :)
+
+Added registration form and forgot password request form . Need to implement it . Working on it .
 
 There may be errors from my part as I am learning . You can download and use at your own risk .
 
