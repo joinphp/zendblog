@@ -5,6 +5,9 @@ class Form_Comments extends Zend_Form
 	{
 		$acl = new Model_Acl();
 		$identity = Zend_Auth::getInstance()->getIdentity();
+		/*
+		 * Check whether they have access to it.
+		 */
 		if( Zend_Auth::getInstance()->hasIdentity()
 		&& $acl->isAllowed( $identity['role'] ,'comments','add') ) {
 			parent::__construct($options);

@@ -1,6 +1,9 @@
 <?php
 class Model_DbTable_Users extends Zend_Db_Table_Abstract
 {
+	/*
+	 * @var $_name table name : users
+	 */
 	protected $_name = 'users';
 	
 	public function findCredentials($username, $pwd)
@@ -9,6 +12,9 @@ class Model_DbTable_Users extends Zend_Db_Table_Abstract
 			->where('password = ?', $this->hashPassword($pwd));
 		$row = $this->fetchRow($select);
 		if($row) {
+			/*
+			 * If success return the row
+			 */
 			return $row;
 		}
 		return false;
@@ -16,6 +22,9 @@ class Model_DbTable_Users extends Zend_Db_Table_Abstract
 
 	protected function hashPassword($pwd)
 	{
+		/*
+		 * return an md5 hash
+		 */
 		return md5($pwd);
 	}
 
