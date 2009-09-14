@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 11, 2009 at 01:04 PM
+-- Generation Time: Sep 15, 2009 at 01:18 AM
 -- Server version: 5.1.37
 -- PHP Version: 5.3.0
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `Webpage` varchar(200) NOT NULL,
   `Postedon` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Dumping data for table `comments`
@@ -64,7 +64,8 @@ INSERT INTO `comments` (`id`, `post_id`, `Description`, `Name`, `Email`, `Webpag
 (21, 4, 'My Test', 'Your Name', 'Email', 'http://webpage.com', '2009-08-27 15:59:25'),
 (22, 5, 'Wow cool man . This is what I love.', 'Martin K Abraham', 'martin@ispg.in', 'ispg.in', '2009-08-27 17:54:42'),
 (23, 8, 'Lorem Ipsum is a dummy text .', 'Lorem Ipsum', 'mail@loremipsum.com', 'http://loremipsum.com', '2009-08-28 09:15:19'),
-(24, 7, 'We need dummy text :)', 'Hari K T', 'hari@ispg.in', 'http://ispg.in', '2009-08-28 09:15:58');
+(24, 7, 'We need dummy text :)', 'Hari K T', 'hari@ispg.in', 'http://ispg.in', '2009-08-28 09:15:58'),
+(25, 9, 'This is a great comment .\r\n\r\nI love this blog tutorial .\r\n\r\nThanks\r\n\r\nHari K T', 'Blogger', 'blogger@blog.com', 'blogspot.com', '2009-09-11 15:50:35');
 
 -- --------------------------------------------------------
 
@@ -102,10 +103,11 @@ INSERT INTO `posts` (`id`, `Title`, `Description`) VALUES
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(200) NOT NULL,
-  `password` varchar(250) NOT NULL,
-  `role` varchar(10) NOT NULL,
-  `name` varchar(200) NOT NULL,
+  `Username` varchar(200) NOT NULL,
+  `Password` varchar(250) NOT NULL,
+  `Role` varchar(10) NOT NULL,
+  `Name` varchar(200) NOT NULL,
+  `Email` varchar(300) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
@@ -113,10 +115,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `role`, `name`) VALUES
-(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'admin', 'Administrator'),
-(2, 'user', 'e10adc3949ba59abbe56e057f20f883e', 'user', ''),
-(3, 'blogger', 'e10adc3949ba59abbe56e057f20f883e', 'blogger', '');
+INSERT INTO `users` (`id`, `Username`, `Password`, `Role`, `Name`, `Email`) VALUES
+(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'admin', 'Administrator', ''),
+(2, 'user', 'e10adc3949ba59abbe56e057f20f883e', 'user', '', ''),
+(3, 'blogger', 'e10adc3949ba59abbe56e057f20f883e', 'blogger', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
