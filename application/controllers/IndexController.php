@@ -90,4 +90,36 @@ class IndexController extends Zend_Controller_Action
 		$auth->clearIdentity();
 		$this->_redirect('/');
 	}
+	
+	public function registerAction()
+	{
+		/*
+		 * Register for new account
+		 */
+		$register = new Form_Registration();
+		if(Zend_Auth::getInstance()->hasIdentity()) {
+			$this->_redirect('/index/hello');
+		} else if ($this->getRequest()->isPost()) {
+			if ( $register->isValid($this->getRequest()->getPost()) ) {
+				
+			}	
+		}	
+		$this->view->register = $register;
+	}
+	
+	public function forgotPasswordAction()
+	{
+		/*
+		 * User submits for new password 
+		 */
+		$forgotPassword = new Form_ForgotPassword();
+		if(Zend_Auth::getInstance()->hasIdentity()) {
+			$this->_redirect('/index/hello');
+		} else if ($this->getRequest()->isPost()) {
+			if ( $forgotPassword->isValid($this->getRequest()->getPost()) ) {
+				
+			}	
+		}	
+		$this->view->forgotPassword = $forgotPassword;
+	}
 }
