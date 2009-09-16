@@ -3,7 +3,7 @@
 <?php
 	$acl = new Model_Acl(); 
 	$identity = Zend_Auth::getInstance()->getIdentity();
-	if( Zend_Auth::getInstance()->hasIdentity() && $acl->isAllowed( $identity['role'] ,'posts','edit') ) : ?>
+	if( Zend_Auth::getInstance()->hasIdentity() && $acl->isAllowed( $identity['Role'] ,'posts','edit') ) : ?>
 <div><a href="<?php echo $this->baseurl().$this->edit; ?>">Edit</a></div> 
 <?php endif; ?> 
 <div class="comments">

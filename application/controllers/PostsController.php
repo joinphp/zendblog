@@ -77,7 +77,7 @@ class PostsController extends Zend_Controller_Action
 		$identity = Zend_Auth::getInstance()->getIdentity();
 		
 		$acl = new Model_Acl();
-		if( $acl->isAllowed( $identity['role'] ,'posts','edit') ) {
+		if( $acl->isAllowed( $identity['Role'] ,'posts','edit') ) {
 			$postForm = new Form_Post();
 			$postModel = new Model_DbTable_Posts();
 			if ($this->getRequest()->isPost()) {
@@ -91,7 +91,8 @@ class PostsController extends Zend_Controller_Action
 			}
 			$this->view->postForm = $postForm;
 		} else {
-			$this->_redirect('posts/view/id/'.$postid);
+			var_dump( $identity['Role'] );
+			//$this->_redirect('posts/view/id/'.$postid);
 		}
 	}
 
