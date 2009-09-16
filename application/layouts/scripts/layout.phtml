@@ -8,6 +8,11 @@ echo $this->doctype() ?>
   <title>Bloggers turns to developers</title>
   <?php echo $this->headLink()->appendStylesheet('/quickstart/public/css/global.css') ?>
   <?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/css/main.css'); ?>
+<?php 
+	if ( $this->ckeditor ) { 
+		echo $this->headScript()->appendFile( $this->baseUrl().'/js/ckeditor/ckeditor.js');
+ 	}
+?>
 </head> 
 <body>
 <div id="header" style="background-color: #EEEEEE; height: 30px;">

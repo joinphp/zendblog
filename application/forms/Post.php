@@ -12,12 +12,22 @@ class Form_Post extends Zend_Form
 				->addFilter('StripTags')
 				->addFilter('StringTrim')
 				->addValidator('NotEmpty');
+		$allowedTags = array(
+						'a' => array('href', 'title'),
+						'strong',
+						'img' => array('src', 'alt'),
+						'ul',
+						'ol',
+						'li',
+						'em',
+						'u',
+						'strike');
 		$description = new Zend_Form_Element_Textarea('Description');
 		$description->setLabel('Description')
 				->setRequired(true)
 				->setAttrib('rows',20)
 				->setAttrib('cols',50)
-				->addFilter('StripTags')
+				->addFilter('StripTags', $allowedTags)
 				->addFilter('StringTrim')
 				->addValidator('NotEmpty');
 		$submit = new Zend_Form_Element_Submit('submit');

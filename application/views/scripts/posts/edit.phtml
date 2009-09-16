@@ -1,2 +1,8 @@
+<?php
+	$this->ckeditor = 'ckeditor';
+?>
 <h2>Edit Post</h2>
 <div><?php echo $this->postForm; ?></div>
+<script type="text/javascript">
+	CKEDITOR.replace( 'Description' );
+</script>
