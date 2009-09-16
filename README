@@ -31,4 +31,8 @@ Feel free to comment for the post in my blog . Let me know the erros and bugs .
 http://harikt.com/content/simple-blog-using-zend-framework-19
 
 
+16-09-09
+
 Added ckeditor the WYSIWYG editor adding and editing posts .
+
+Changed the way the login and logout was added .

@@ -3,6 +3,5 @@
 ?>
 <h2>Edit Post</h2>
 <div><?php echo $this->postForm; ?></div>
-<script type="text/javascript">
-	CKEDITOR.replace( 'Description' );
-</script>
+<!-- Description is the id of the textarea -->
+<?php echo " Hello ".$this->setupEditor( 'Description' ) ?>
