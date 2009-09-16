@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 16, 2009 at 07:38 PM
+-- Generation Time: Sep 16, 2009 at 07:46 PM
 -- Server version: 5.1.37
 -- PHP Version: 5.3.0
 
@@ -41,31 +41,31 @@ CREATE TABLE IF NOT EXISTS `comments` (
 --
 
 INSERT INTO `comments` (`id`, `post_id`, `Description`, `Name`, `Email`, `Webpage`, `Postedon`) VALUES
-(1, 1, 'Hello World comment also a hello world', 'Hari K T', 'hari@ispg.in', 'http://google.com', '2009-08-27 12:33:05'),
-(2, 1, 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,', 'Sarath Tomy', 'sarath@ispg.in', '', '2009-08-27 12:53:20'),
-(3, 1, 'Contrary to popular belief, Lorem Ipsum is not simply random text. ', 'Sarath Tomy', 'sarath@ispg.in', '', '2009-08-27 12:53:47'),
-(4, 1, 'My dummy comment', 'Dummy', 'dummy@dummy.com', 'dummy.com', '2009-08-27 14:53:25'),
-(5, 1, 'My dummy comment', 'Dummy', 'dummy@dummy.com', 'dummy.com', '2009-08-27 14:54:05'),
-(6, 1, 'Values are nice', 'Chris', 'chris@designcustoms.com', 'designcustoms.com', '2009-08-27 14:55:30'),
-(7, 1, 'Yes I am Mr Cool . ;)', 'Cool', 'cool@cool.com', 'cool.com', '2009-08-27 15:09:26'),
-(8, 1, 'Yes I am Mr Cool . ;)', 'Cool', 'cool@cool.com', 'cool.com', '2009-08-27 15:15:59'),
-(9, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .', 'Mr Cool', 'mrcool@cool.com', 'cool.com', '2009-08-27 15:20:26'),
-(10, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .', 'Mr Cool', 'mrcool@cool.com', 'cool.com', '2009-08-27 15:21:18'),
-(11, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .', 'Mr Cool', 'mrcool@cool.com', 'cool.com', '2009-08-27 15:22:38'),
-(12, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .', 'Mr Cool', 'mrcool@cool.com', 'cool.com', '2009-08-27 15:23:50'),
-(13, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .\r\n\r\nNow I am rude ..', 'Mr Cool', 'mrcool@cool.com', 'cool.com', '2009-08-27 15:24:35'),
-(14, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .\r\n\r\nNow I am rude ..\r\n\r\nFuck it man', 'Mr Cool', 'mrcool@cool.com', 'cool.com', '2009-08-27 15:25:36'),
-(15, 2, 'I am the first to post comments to this post .', 'Hari K T', 'hari@ispg.in', 'designcustoms.com', '2009-08-27 15:38:08'),
-(16, 2, 'I am simply Jack .', 'Jack', 'jack@jack.com', 'jak.com', '2009-08-27 15:38:40'),
-(17, 2, 'I am simply Jack .', 'Jack', 'jack@jack.com', 'jak.com', '2009-08-27 15:40:03'),
-(18, 3, 'Onam is a great and wonderful festival .', 'Sujith M S', 'sujith@ispg.in', 'ispg.in', '2009-08-27 15:40:43'),
-(19, 4, 'I love X'' mas . We all get wonderful holidays in these days .', 'Ajith K D', 'ajith@ispg.in', 'ispg.in', '2009-08-27 15:41:43'),
-(20, 3, 'Hello I am on leave for 2 days.\r\n\r\nThanks', 'Riyas K P', 'riyas@ispg.in', 'http://ispg.in', '2009-08-27 15:50:23'),
-(21, 4, 'My Test', 'Your Name', 'Email', 'http://webpage.com', '2009-08-27 15:59:25'),
-(22, 5, 'Wow cool man . This is what I love.', 'Martin K Abraham', 'martin@ispg.in', 'ispg.in', '2009-08-27 17:54:42'),
-(23, 8, 'Lorem Ipsum is a dummy text .', 'Lorem Ipsum', 'mail@loremipsum.com', 'http://loremipsum.com', '2009-08-28 09:15:19'),
-(24, 7, 'We need dummy text :)', 'Hari K T', 'hari@ispg.in', 'http://ispg.in', '2009-08-28 09:15:58'),
-(25, 9, 'This is a great comment .\r\n\r\nI love this blog tutorial .\r\n\r\nThanks\r\n\r\nHari K T', 'Blogger', 'blogger@blog.com', 'blogspot.com', '2009-09-11 15:50:35');
+(1, 1, 'Hello World comment also a hello world', 'Hari K T', 'test@example.com', 'http://harikt.com', '2009-08-27 12:33:05'),
+(2, 1, 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,', 'Sarath Tomy', 'test@example.com', 'http://harikt.com', '2009-08-27 12:53:20'),
+(3, 1, 'Contrary to popular belief, Lorem Ipsum is not simply random text. ', 'Sarath Tomy', 'test@example.com', 'http://harikt.com', '2009-08-27 12:53:47'),
+(4, 1, 'My dummy comment', 'Dummy', 'test@example.com', 'http://harikt.com', '2009-08-27 14:53:25'),
+(5, 1, 'My dummy comment', 'Dummy', 'test@example.com', 'http://harikt.com', '2009-08-27 14:54:05'),
+(6, 1, 'Values are nice', 'Chris', 'test@example.com', 'http://harikt.com', '2009-08-27 14:55:30'),
+(7, 1, 'Yes I am Mr Cool . ;)', 'Cool', 'test@example.com', 'http://harikt.com', '2009-08-27 15:09:26'),
+(8, 1, 'Yes I am Mr Cool . ;)', 'Cool', 'test@example.com', 'http://harikt.com', '2009-08-27 15:15:59'),
+(9, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .', 'Mr Cool', 'test@example.com', 'http://harikt.com', '2009-08-27 15:20:26'),
+(10, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .', 'Mr Cool', 'test@example.com', 'http://harikt.com', '2009-08-27 15:21:18'),
+(11, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .', 'Mr Cool', 'test@example.com', 'http://harikt.com', '2009-08-27 15:22:38'),
+(12, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .', 'Mr Cool', 'test@example.com', 'http://harikt.com', '2009-08-27 15:23:50'),
+(13, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .\r\n\r\nNow I am rude ..', 'Mr Cool', 'test@example.com', 'http://harikt.com', '2009-08-27 15:24:35'),
+(14, 1, 'Yes cool is my brother . But I am Mr cool not as cool as cool .\r\n\r\nNow I am rude ..\r\n\r\nFuck it man', 'Mr Cool', 'test@example.com', 'http://harikt.com', '2009-08-27 15:25:36'),
+(15, 2, 'I am the first to post comments to this post .', 'Hari K T', 'test@example.com', 'http://harikt.com', '2009-08-27 15:38:08'),
+(16, 2, 'I am simply Jack .', 'Jack', 'test@example.com', 'http://harikt.com', '2009-08-27 15:38:40'),
+(17, 2, 'I am simply Jack .', 'Jack', 'test@example.com', 'http://harikt.com', '2009-08-27 15:40:03'),
+(18, 3, 'Onam is a great and wonderful festival .', 'Sujith M S', 'test@example.com', 'http://harikt.com', '2009-08-27 15:40:43'),
+(19, 4, 'I love X'' mas . We all get wonderful holidays in these days .', 'Ajith K D', 'test@example.com', 'http://harikt.com', '2009-08-27 15:41:43'),
+(20, 3, 'Hello I am on leave for 2 days.\r\n\r\nThanks', 'Riyas K P', 'test@example.com', 'http://harikt.com', '2009-08-27 15:50:23'),
+(21, 4, 'My Test', 'Your Name', 'test@example.com', 'http://harikt.com', '2009-08-27 15:59:25'),
+(22, 5, 'Wow cool man . This is what I love.', 'Martin K Abraham', 'test@example.com', 'http://harikt.com', '2009-08-27 17:54:42'),
+(23, 8, 'Lorem Ipsum is a dummy text .', 'Lorem Ipsum', 'test@example.com', 'http://harikt.com', '2009-08-28 09:15:19'),
+(24, 7, 'We need dummy text :)', 'Hari K T', 'test@example.com', 'http://harikt.com', '2009-08-28 09:15:58'),
+(25, 9, 'This is a great comment .\r\n\r\nI love this blog tutorial .\r\n\r\nThanks\r\n\r\nHari K T', 'Blogger', 'test@example.com', 'http://harikt.com', '2009-09-11 15:50:35');
 
 -- --------------------------------------------------------
 
