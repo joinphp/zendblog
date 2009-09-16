@@ -21,6 +21,7 @@ class Form_Post extends Zend_Form
 						'li',
 						'em',
 						'u',
+						'p',
 						'strike');
 		$description = new Zend_Form_Element_Textarea('Description');
 		$description->setLabel('Description')
