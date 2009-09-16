@@ -28,8 +28,10 @@ class Form_Post extends Zend_Form
 				->setRequired(true)
 				->setAttrib('rows',20)
 				->setAttrib('cols',50)
-				->addFilter('StripTags', $allowedTags)
 				->addFilter('StringTrim')
+/*				->addFilter('StripTags', $allowedTags)
+ * 				Don't know why its not working ?
+ */
 				->addValidator('NotEmpty');
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
