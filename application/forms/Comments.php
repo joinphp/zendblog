@@ -9,7 +9,7 @@ class Form_Comments extends Zend_Form
 		 * Check whether they have access to it.
 		 */
 		if( Zend_Auth::getInstance()->hasIdentity()
-		&& $acl->isAllowed( $identity['role'] ,'comments','add') ) {
+		&& $acl->isAllowed( $identity['Role'] ,'comments','add') ) {
 			parent::__construct($options);
 			$this->setName('Comments');
 			$id = new Zend_Form_Element_Hidden('id');
