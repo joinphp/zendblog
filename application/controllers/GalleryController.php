@@ -51,7 +51,28 @@ class GalleryController extends Zend_Controller_Action
 
 	public function viewAction()
 	{
-		// action body
+		/*
+		 * View a particular picture in fullsize from an album
+		 */
+		/*
+		 * Get user and albumId
+		 */
+		$user = $this->_getParam('user');
+		$albumId = $this->_getParam('albumId');
+		$photoId = $this->_getParam('photoId');
+		
+		$service = new Zend_Gdata_Photos();
+		$query = new Zend_Gdata_Photos_PhotoQuery();
+		$query->setUser($user);
+		$query->setAlbumId($albumId);
+		$query->setPhotoId($photoId);
+		$query = $query->getQueryUrl() . "?kind=comment,tag";
+
+		$photoFeed = $service->getPhotoFeed($query);
+		$this->view->photoFeed = $photoFeed;
+		$this->view->user = $user;
+		$this->view->albumId = $albumId;
+		
 	}
 
 }
