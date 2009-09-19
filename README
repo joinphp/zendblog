@@ -38,3 +38,9 @@ Added ckeditor the Opensource WYSIWYG editor for adding and editing posts .
 *Sorry a bug its not storing the tags . Striptags stipping :) . Let me see whether I can trace it out .
 
 Changed the way the login and logout was added .
+
+Gallery : 
+
+Added a small portion to get the picasa web albums from public gallery
+
+I am thinking to implement the feature to upload to picasa via admin . Hope to do it soon :) . So every one can enjoy it .

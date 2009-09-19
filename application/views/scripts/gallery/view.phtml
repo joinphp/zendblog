@@ -1,4 +1,4 @@
-<h2>Photo Feed for: <?php echo $this->photoFeed->getTitle(); ?></h2>
+<h2>Photo : <?php echo $this->photoFeed->getTitle(); ?></h2>
 <a href="<?php echo $this->baseUrl()."/gallery/album/user/".$this->user."/albumId/".$this->albumId; ?>">Back to Album</a>
 <div>
 <?php $thumbs = $this->photoFeed->getMediaGroup()->getThumbnail(); ?>
