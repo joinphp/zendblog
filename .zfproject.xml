@@ -19,6 +19,12 @@
           <actionMethod actionName="add"/>
           <actionMethod actionName="edit"/>
         </controllerFile>
+        <controllerFile controllerName="gallery">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="valbum"/>
+          <actionMethod actionName="album"/>
+          <actionMethod actionName="view"/>
+        </controllerFile>
       </controllersDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory/>
@@ -45,6 +51,18 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="posts">
             <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="gallery">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="gallery">
+            <viewScriptFile forActionName="valbum"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="gallery">
+            <viewScriptFile forActionName="album"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="gallery">
+            <viewScriptFile forActionName="view"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
@@ -77,6 +95,7 @@
       <testApplicationDirectory>
         <testApplicationBootstrapFile/>
         <testApplicationControllerDirectory>
+          <testApplicationControllerFile/>
           <testApplicationControllerFile/>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
