@@ -1,7 +1,7 @@
 <?php
 
 class GalleryController extends Zend_Controller_Action
-{	
+{
 	public function init()
 	{
 		/* Initialize action controller here */
@@ -31,7 +31,22 @@ class GalleryController extends Zend_Controller_Action
 	public function albumAction()
 	{
 		// action body
-		
+		$service = new Zend_Gdata_Photos();
+		$user = $this->_getParam('user');
+		$albumId = $this->_getParam('albumId');
+		/*
+		 * Get photos from Album
+		 */
+		$query = new Zend_Gdata_Photos_AlbumQuery();
+		$query->setUser($user);
+		$query->setAlbumId($albumId);
+		$albumFeed = $service->getAlbumFeed($query);
+		/*
+		 * Assign to view
+		 */
+		$this->view->albumFeed = $albumFeed;
+		$this->view->user = $user;
+		$this->view->albumId = $albumId;
 	}
 
 	public function viewAction()
